@@ -1,7 +1,5 @@
 package com.ams.resident.controller;
 
-import com.ams.resident.dto.EmailChangeRequest;
-import com.ams.resident.dto.EmailConfirmRequest;
 import com.ams.resident.dto.ProfileRequest;
 import com.ams.resident.dto.ProfileResponse;
 import com.ams.resident.service.ProfileService;
@@ -25,17 +23,5 @@ public class ProfileController {
     @PutMapping
     public ResponseEntity<ProfileResponse> editOwnProfile(@Valid @RequestBody ProfileRequest request) {
         return ResponseEntity.ok(profileService.editOwnProfile(request));
-    }
-
-    @PostMapping("/email-change")
-    public ResponseEntity<Void> requestEmailChange(@Valid @RequestBody EmailChangeRequest request) {
-        profileService.requestEmailChange(request);
-        return ResponseEntity.accepted().build();
-    }
-
-    @PutMapping("/email-change/confirm")
-    public ResponseEntity<Void> confirmEmailChange(@Valid @RequestBody EmailConfirmRequest request) {
-        profileService.confirmEmailChange(request);
-        return ResponseEntity.ok().build();
     }
 }

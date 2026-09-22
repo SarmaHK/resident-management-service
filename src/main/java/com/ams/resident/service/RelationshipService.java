@@ -6,7 +6,6 @@ import com.ams.resident.entity.ApartmentRelationship;
 import com.ams.resident.entity.RelationshipStatus;
 import com.ams.resident.repository.ApartmentRelationshipRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -45,7 +44,8 @@ public class RelationshipService {
     }
 
     private String getAuthenticatedUserId() {
-        return SecurityContextHolder.getContext().getAuthentication().getName();
+        // Temporary placeholder until Phase 4 (Gateway JWT Security)
+        return "temp-user-id";
     }
     
     private RelationshipResponse mapToResponse(ApartmentRelationship relationship) {
