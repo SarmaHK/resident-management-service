@@ -1,5 +1,6 @@
 package com.ams.resident.service;
 
+import com.ams.resident.client.PropertyClient;
 import com.ams.resident.dto.RelationshipRequest;
 import com.ams.resident.dto.RelationshipResponse;
 import com.ams.resident.entity.ApartmentRelationship;
@@ -18,10 +19,14 @@ public class RelationshipService {
 
     private final ApartmentRelationshipRepository relationshipRepository;
     private final AuditService auditService;
+    private final PropertyClient propertyClient;
 
     @Transactional
     public RelationshipResponse createRelationshipRequest(RelationshipRequest request) {
         String userId = getAuthenticatedUserId();
+
+        // Validating against external Property Service
+        propertyClient.checkUnitExists(request.getUnitReference());
 
         ApartmentRelationship relationship = new ApartmentRelationship();
         relationship.setUserId(userId);

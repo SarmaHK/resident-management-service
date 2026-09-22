@@ -1,0 +1,23 @@
+package com.ams.resident.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class ResidentRequest {
+    
+    @NotBlank(message = "userId is required")
+    private String userId;
+    
+    @NotBlank(message = "firstName is required")
+    private String firstName;
+    
+    @NotBlank(message = "lastName is required")
+    private String lastName;
+    
+    private String phone;
+    
+    private String emergencyContact;
+}

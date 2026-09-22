@@ -1,5 +1,7 @@
 package com.ams.resident.service;
 
+import com.ams.resident.client.IdentityClient;
+import com.ams.resident.dto.EmailChangeRequest;
 import com.ams.resident.dto.ProfileRequest;
 import com.ams.resident.dto.ProfileResponse;
 import com.ams.resident.entity.Profile;
@@ -15,6 +17,7 @@ public class ProfileService {
 
     private final ProfileRepository profileRepository;
     private final AuditService auditService;
+    private final IdentityClient identityClient;
 
     public ProfileResponse getOwnProfile() {
         String userId = getAuthenticatedUserId();
@@ -39,6 +42,13 @@ public class ProfileService {
         auditService.logEvent("FR-AUD-006", userId, "Updated own profile");
 
         return mapToResponse(profile);
+    }
+
+    public void requestEmailChange(EmailChangeRequest request) {
+        String userId = getAuthenticatedUserId();
+        // Forward email change request to Identity Service
+        identityClient.requestEmailChange(userId, request.getNewEmail());
+        auditService.logEvent("FR-AUD-006", userId, "Requested email change to: " + request.getNewEmail());
     }
 
     private String getAuthenticatedUserId() {
