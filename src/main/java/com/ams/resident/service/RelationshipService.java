@@ -44,8 +44,7 @@ public class RelationshipService {
     }
 
     private String getAuthenticatedUserId() {
-        // Temporary placeholder until Phase 4 (Gateway JWT Security)
-        return "temp-user-id";
+        return com.ams.resident.security.SecurityUtils.getCurrentUserId();
     }
     
     private RelationshipResponse mapToResponse(ApartmentRelationship relationship) {

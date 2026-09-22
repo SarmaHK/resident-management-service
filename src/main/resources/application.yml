@@ -22,3 +22,7 @@ spring:
 
 server:
   port: 8080
+
+gateway:
+  jwt:
+    public-key: ${GATEWAY_JWT_PUBLIC_KEY}
