@@ -31,11 +31,4 @@ public class GlobalExceptionHandler {
         body.put("error", ex.getMessage());
         return new ResponseEntity<>(body, HttpStatus.CONFLICT);
     }
-    
-    @ExceptionHandler(org.springframework.security.access.AccessDeniedException.class)
-    public ResponseEntity<Map<String, String>> handleAccessDenied(org.springframework.security.access.AccessDeniedException ex) {
-        Map<String, String> body = new HashMap<>();
-        body.put("error", "Access Denied: " + ex.getMessage());
-        return new ResponseEntity<>(body, HttpStatus.FORBIDDEN);
-    }
 }
