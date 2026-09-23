@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.ams.resident.controller.ProfileControllerTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.591 s -- in com.ams.resident.controller.ProfileControllerTest

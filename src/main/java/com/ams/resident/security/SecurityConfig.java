@@ -42,6 +42,7 @@ public class SecurityConfig {
             .csrf(AbstractHttpConfigurer::disable)
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(authz -> authz
+                .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                 .requestMatchers("/api/v1/profiles/me/**", "/api/v1/relationships/me/**").hasAnyRole("TENANT", "OWNER", "RESIDENT", "APARTMENT_MANAGER", "SYSTEM_ADMIN")
                 .requestMatchers("/api/v1/relationships").hasAnyRole("TENANT", "OWNER", "RESIDENT", "APARTMENT_MANAGER", "SYSTEM_ADMIN")
                 .anyRequest().authenticated()
