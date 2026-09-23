@@ -8,6 +8,7 @@ com\ams\resident\entity\OwnerProfile.class
 com\ams\resident\entity\Profile.class
 com\ams\resident\entity\ProfileType.class
 com\ams\resident\dto\ResidentRequest.class
+com\ams\resident\config\OpenApiConfig.class
 com\ams\resident\entity\ResidentProfile.class
 com\ams\resident\controller\ProfileController.class
 com\ams\resident\repository\ApartmentRelationshipRepository.class

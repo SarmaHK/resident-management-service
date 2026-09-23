@@ -24,9 +24,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import org.junit.jupiter.api.Disabled;
 
-@Disabled("Docker/Testcontainers is unavailable in the environment")
 @AutoConfigureMockMvc
 public class RelationshipIntegrationTest extends AbstractIntegrationTest {
 

@@ -23,9 +23,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import org.junit.jupiter.api.Disabled;
 
-@Disabled("Docker/Testcontainers is unavailable in the environment")
 @AutoConfigureMockMvc
 public class ProfileIntegrationTest extends AbstractIntegrationTest {
 

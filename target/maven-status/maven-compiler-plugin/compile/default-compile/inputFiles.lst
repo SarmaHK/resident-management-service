@@ -5,6 +5,7 @@ D:\Kelani MIT\2nd Year\2nd Sem\Software Architecture\ams\resident-management-ser
 D:\Kelani MIT\2nd Year\2nd Sem\Software Architecture\ams\resident-management-service\src\main\java\com\ams\resident\security\SecurityUtils.java
 D:\Kelani MIT\2nd Year\2nd Sem\Software Architecture\ams\resident-management-service\src\main\java\com\ams\resident\dto\EmailChangeRequest.java
 D:\Kelani MIT\2nd Year\2nd Sem\Software Architecture\ams\resident-management-service\src\main\java\com\ams\resident\entity\ResidentProfile.java
+D:\Kelani MIT\2nd Year\2nd Sem\Software Architecture\ams\resident-management-service\src\main\java\com\ams\resident\config\OpenApiConfig.java
 D:\Kelani MIT\2nd Year\2nd Sem\Software Architecture\ams\resident-management-service\src\main\java\com\ams\resident\exception\ApiErrorResponse.java
 D:\Kelani MIT\2nd Year\2nd Sem\Software Architecture\ams\resident-management-service\src\main\java\com\ams\resident\entity\RelationshipStatus.java
 D:\Kelani MIT\2nd Year\2nd Sem\Software Architecture\ams\resident-management-service\src\main\java\com\ams\resident\dto\ResidentRequest.java
